@@ -1,6 +1,3 @@
-# INSTALL:
-# brew install fortune
-
 import SimpleHTTPServer
 import SocketServer
 import StringIO
