@@ -11,11 +11,11 @@ brew install fortune
 
 1. build image
 
-`docker build -t my-python-app .`
+`docker build -t hello-app .`
 
 2. run container
 
-`docker run -it --rm --name my-running-app my-python-app`
+`docker run -it --rm --name hello-proc hello-app`
 
 3. open browser to the container's exposed port
 
