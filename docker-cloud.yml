@@ -1,0 +1,4 @@
+hello:
+  image: 'theblacktux/hello-app:latest'
+  ports:
+    - '8000'

@@ -17,7 +17,7 @@ class MyHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         
     def do_GET(self):
         self.send_head()
-        output_str = subprocess.check_output(['fortune'])
+        output_str = subprocess.check_output(['/usr/games/fortune'])
         fortunef = StringIO.StringIO(output_str)
         self.copyfile(fortunef, self.wfile)
     
