@@ -7,10 +7,10 @@ tiny Python project, for testing Docker and other tools
 
 `docker build -t hello-app .`
 
-2. run container, mapping internal port
+2. run container, mapping internal port to outside
 
-`docker run -it --rm -p 8000:8000 hello-app`
+`docker run -it --rm -P hello-app`
 
-3. open browser to the container's exposed port
+3. open browser to the container's outside port
 
 `open http://$(docker-machine ip default):8000`
