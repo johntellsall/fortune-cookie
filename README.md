@@ -17,4 +17,6 @@ brew install fortune
 
 `docker run -it --rm --name my-running-app my-python-app`
 
-3. open browser to http://localhost:8000/
+3. open browser to the container's exposed port
+
+`open http://localhost:8000/`
