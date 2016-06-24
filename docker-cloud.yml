@@ -1,4 +1,17 @@
-hello:
-  image: 'theblacktux/hello-app:latest'
+
+fortune-app:
+  image: 'dockercloud/hello-world:latest'
+  target_num_containers: 2
+  tags:
+    - fortune
+
+fortune-lb:
+  image: 'dockercloud/haproxy:latest'
+  links:
+    - fortune-app
   ports:
-    - '8000'
+    - '8000:80'
+  roles:
+    - global
+  tags:
+    - fortune
