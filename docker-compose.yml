@@ -1,0 +1,13 @@
+# https://github.com/docker/dockercloud-haproxy#example-of-docker-composeyml-running-on-linux-or-docker-for-mac-beta
+
+web:
+    build: .
+
+lb:
+    image: dockercloud/haproxy:1.2.1
+    links:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8000:80
