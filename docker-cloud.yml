@@ -1,6 +1,8 @@
 
 fortune-app:
-  image: 'dockercloud/hello-world:latest'
+#  image: 'dockercloud/hello-world:latest'
+  image: 'johntellsall/fortunecookie_web'
+
   target_num_containers: 2
   tags:
     - fortune
